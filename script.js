@@ -64,7 +64,7 @@ const question3 = () => {
     const firstName = firstNameInput.value.trim();
     const lastName = lastNameInput.value.trim();
 
-    message.textContent = 'Hello ${firstName} ${lastName}!'.trim();
+    message.textContent = `Hello ${firstName} ${lastName}!`.trim();
 
   };
 
