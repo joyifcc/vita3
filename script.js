@@ -41,26 +41,36 @@ const question2 = () => {
     if (taskText === "") { 
       return; // no action if empty
     }
-  })
 
+    const newTodoItem = document.createElement("li");
+    newTodoItem.textContent = taskText; // setting the test content
 
+    todoListUl.appendChild(newTodoItem); // appending to list
+    taskName.value = ""
+
+  });
 };
 
 /**
  * Question 3
  */
 const question3 = () => {
-  const firstNameInput = __YOUR_CODE_HERE__;
-  const lastNameInput = __YOUR_CODE_HERE__;
-  const message = __YOUR_CODE_HERE__;
+  const firstNameInput = document.getElementById("first-name");
+  const lastNameInput = document.getElementById("last-name");
+  const message = document.getElementById("message");
 
   // using this function is reccomended but not necessary
   const updateMessage = () => {
-    /** YOUR CODE HERE */
+    const firstName = firstNameInput.value.trim();
+    const lastName = lastNameInput.value.trim();
+
+    message.textContent = 'Hello ${firstName} ${lastName}!'.trim();
 
   };
 
-  /** YOUR CODE HERE */
+  firstNameInput.addEventListener("input", updateMessage);
+  lastNameInput.addEventListener("input", updateMessage);
+
 
 };
 
